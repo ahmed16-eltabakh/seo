@@ -19,6 +19,7 @@ html {
 }
 
 body {
+  height: 100vh;
   font-family: "Cairo", sans-serif;
   background-color: var(--bage-background);
 }
@@ -160,13 +161,13 @@ h6 {
   min-width: 160px;
   height: 180px;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 35px;
   margin: auto;
 }
 
 .my_cv .main_content .side_bar .side_bar_data .img_container img {
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
   height: 100%;
 }
@@ -185,11 +186,11 @@ h6 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .my_cv .main_content .side_bar .side_bar_data .info .job_title {
@@ -231,6 +232,10 @@ h6 {
   color: var(--text);
   cursor: pointer;
   font-size: 20px;
+  padding: 8px 10px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  transition: 250ms;
 }
 
 @media (max-width: 1334px) {
@@ -241,6 +246,7 @@ h6 {
 
 .my_cv .main_content .side_bar .side_bar_data .info .social i:hover {
   color: var(--icon_after);
+  border-color: var(--icon_after);
 }
 
 .my_cv .main_content .side_bar .side_bar_data .info .data {
@@ -447,7 +453,7 @@ h6 {
   cursor: pointer;
   height: 45px;
   width: 40px;
-  margin-left: 20px;
+  margin-left: 5px;
 }
 
 @media (max-width: 992px) {
@@ -957,9 +963,8 @@ h6 {
 }
 
 .my_cv .main_content .home_container .contner .card_container {
+  text-align: center;
   -webkit-box-flex: 4;
-      -ms-flex: 4;
-          flex: 4;
 }
 
 .my_cv .main_content .home_container .contner .card_container .img_container {
@@ -1004,7 +1009,7 @@ h6 {
   font-weight: 600;
   display: inline-block;
   margin-bottom: 7px;
-  max-width: 100px;
+  max-width: 150px;
 }
 
 .my_cv .main_content .home_container .contner .card_container p {
