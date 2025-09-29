@@ -21,7 +21,10 @@ html {
 body {
   height: 100vh;
   font-family: "Cairo", sans-serif;
-  background-color: var(--bage-background);
+  background:  linear-gradient(145deg, #0f172a, #1e293b);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 ::-moz-selection {
@@ -121,7 +124,7 @@ h6 {
 }
 
 .my_cv .main_content .side_bar {
-  background-color: var(--container-background);
+  background-color: #0c1429;
   width: 240px;
   height: 522px;
   border-radius: 23px;
@@ -130,6 +133,7 @@ h6 {
   position: -webkit-sticky;
   position: sticky;
   top: 100px;
+  border: 3px solid #fff;
 }
 
 @media (max-width: 1065px) {
@@ -153,6 +157,7 @@ h6 {
 }
 
 .my_cv .main_content .side_bar .side_bar_data {
+  color: #ffffff;
   margin-top: -80px;
 }
 
@@ -194,7 +199,7 @@ h6 {
 }
 
 .my_cv .main_content .side_bar .side_bar_data .info .job_title {
-  background-color: var(--bage-background);
+  background-color: rgb(255, 255, 255, 0.1);
   border-radius: 20px;
   padding: 10px 15px;
   margin-top: 15px;
@@ -353,11 +358,12 @@ h6 {
 
 .my_cv .main_content .home_container {
   width: 870px;
-  background-color: var(--container-background);
+  background-color: #0c1429;
   border-radius: 23px;
   position: relative;
   padding: 25px 20px;
   font-family: "Archivo", sans-serif;
+  border: 3px solid #fff;
 }
 
 @media (max-width: 992px) {
@@ -473,6 +479,8 @@ h6 {
   display: none;
 }
 
+
+
 .my_cv .main_content .home_container .header .head {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -525,14 +533,15 @@ h6 {
 
 .my_cv .main_content .home_container .header .ft_p,
 .my_cv .main_content .home_container .header .se_p {
-  color: #dedde0;
+  color: #ffffff;
   font-family: "Archivo", sans-serif;
-  font-size: 0.9375rem;
-  font-weight: 400;
+  font-size: 1.02rem;
+  font-weight: 500;
   line-height: 1.65;
 }
 
 .my_cv .main_content .home_container .what_doing h2 {
+  text-align: end;
   margin: 40px 0;
 }
 
@@ -549,6 +558,8 @@ h6 {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 15px;
+  align-items: stretch;  
+
 }
 
 @media (max-width: 992px) {
@@ -563,7 +574,7 @@ h6 {
 .my_cv .main_content .home_container .what_doing .cards .card {
   -ms-flex-preferred-size: 48%;
       flex-basis: 48%;
-  background-color: var(--card-background);
+  background-color: #0c1429;
   border-radius: 20px;
   padding: 20px;
   display: -webkit-box;
@@ -576,6 +587,9 @@ h6 {
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 15px;
+  border: 3px solid #fff;
+  color: #ffffff;
+
 }
 
 .my_cv .main_content .home_container .what_doing .cards .card img {
@@ -631,7 +645,8 @@ h6 {
 .my_cv .main_content .home_container .testimonials .brand-carousel .single-card {
   height: 130px;
   position: relative;
-  background-color: var(--card-background);
+  background-color: #0c1429;
+  border: 3px solid #fff;
   border-radius: 20px;
   padding: 30px 20px;
   display: -webkit-box;
