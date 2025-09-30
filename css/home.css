@@ -83,6 +83,119 @@ h6 {
   color: var(--text);
 }
 
+.experience, 
+.certifications {
+  padding: 40px;
+  background: linear-gradient(135deg, #0c1429 70%, rgb(12, 134, 255) 130%);
+  border-radius: 12px;
+  direction: rtl;
+  text-align: right;
+  box-shadow: 0 0 20px rgba(12, 134, 255, 0.2);
+  margin-bottom: 40px;
+  transition: transform 0.3s ease;
+}
+
+.experience:hover,
+.certifications:hover {
+  transform: translateY(-5px);
+}
+
+.experience h2,
+.certifications h2 {
+  font-size: 40px;
+  margin-bottom: 25px;
+  border-bottom: 3px solid rgb(12, 134, 255);
+  display: inline-block;
+  padding-bottom: 5px;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.exp-item,
+.cert-item {
+  margin-bottom: 35px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  border-left: 4px solid rgb(12, 134, 255);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.exp-item:hover,
+.cert-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateX(-5px);
+}
+
+.exp-item h3,
+.cert-item h3 {
+  font-size: 28px;
+  color: rgb(12, 134, 255);
+  margin-bottom: 8px;
+}
+
+.exp-item p,
+.cert-item p {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+.exp-item ul {
+  list-style: disc;
+  padding-right: 25px;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.exp-item ul li {
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+.exp-item ul li:hover {
+  color: rgb(12, 134, 255);
+}
+
+
+@media (max-width: 768px) {
+  .experience, 
+  .certifications {
+    padding: 20px;
+  }
+
+  .experience h2, 
+  .certifications h2 {
+    font-size: 28px;
+  }
+
+  .exp-item h3, 
+  .cert-item h3 {
+    font-size: 22px;
+  }
+
+  .exp-item p, 
+  .cert-item p {
+    font-size: 16px;
+  }
+
+  .exp-item ul {
+    font-size: 15px;
+    padding-right: 15px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
 .my_cv {
   background-image: url("../image/triangles-bottom.svg"), url("../image/triangles-top.svg");
   background-position: left top, right bottom;
@@ -133,7 +246,7 @@ h6 {
   position: -webkit-sticky;
   position: sticky;
   top: 100px;
-  border: 3px solid #fff;
+  border: 3px solid rgb(12, 134, 255);
 }
 
 @media (max-width: 1065px) {
@@ -291,7 +404,7 @@ h6 {
 
 .my_cv .main_content .side_bar .side_bar_data .info .data span {
   font-size: 13px;
-  font-weight: 400;
+  font-weight: 600;
   margin-bottom: 15px;
   color: #dedde0;
   display: -webkit-box;
@@ -363,7 +476,7 @@ h6 {
   position: relative;
   padding: 25px 20px;
   font-family: "Archivo", sans-serif;
-  border: 3px solid #fff;
+  border: 3px solid rgb(12, 134, 255);
 }
 
 @media (max-width: 992px) {
@@ -479,6 +592,19 @@ h6 {
   display: none;
 }
 
+.my_cv .main_content .home_container .header .ft_p span {
+  color: rgb(12, 134, 255);
+  font-weight: 700; 
+  background-color: rgba(12, 134, 255, 0.1); 
+  padding: 2px 6px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.my_cv .main_content .home_container .header .ft_p span:hover {
+  color: #ffffff;
+  transform: scale(1.05);
+}
 
 
 .my_cv .main_content .home_container .header .head {
@@ -590,9 +716,15 @@ h6 {
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 15px;
-  border: 3px solid #fff;
+  border: 3px solid rgb(12, 134, 255);
   color: #ffffff;
+  transition: all 250ms ease-in-out;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
 
+.my_cv .main_content .home_container .what_doing .cards .card:hover{
+  transform: translateX(-5px);
+  box-shadow: 0 0 20px rgba(12, 134, 255, 0.5);
 }
 
 .my_cv .main_content .home_container .what_doing .cards .card img {
@@ -602,14 +734,16 @@ h6 {
 }
 
 .my_cv .main_content .home_container .what_doing .cards .card .info h4 {
+  font-size: 18px;
+  font-weight: 600;
   margin: 0;
   margin-bottom: 10px;
 }
 
 .my_cv .main_content .home_container .what_doing .cards .card .info p {
-  color: #dedde0;
+  color: #fff;
   font-family: "Archivo", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1.65;
   margin: 0;
@@ -649,7 +783,7 @@ h6 {
   height: 130px;
   position: relative;
   background-color: #0c1429;
-  border: 3px solid #fff;
+  border: 3px solid rgb(12, 134, 255);
   border-radius: 20px;
   padding: 30px 20px;
   display: -webkit-box;
@@ -660,6 +794,11 @@ h6 {
           align-items: center;
   -webkit-column-gap: 10px;
           column-gap: 10px;
+          transition: all 250ms ease-in-out;
+}
+
+.my_cv .main_content .home_container .testimonials .brand-carousel .single-card:hover{
+  box-shadow: 5px 5px 20px rgba(12, 134, 255, 0.6);
 }
 
 .my_cv .main_content .home_container .testimonials .brand-carousel .single-card img {
@@ -1002,7 +1141,7 @@ h6 {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 20px;
-  border: 1px solid #494949;
+  border: 1px solid rgb(12, 134, 255);
 }
 
 .my_cv .main_content .home_container .contner .card_container .img_container a {
