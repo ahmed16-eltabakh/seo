@@ -1,30 +1,54 @@
-$(document).ready(function () {
+document.addEventListener("DOMContentLoaded", function () {
 
-  
-  // close menu
-  $(".close_menu").click(function () {
-    $(".menu_list").hide(300);
-    $(".close_menu").css("display", "none");
-    $(".open_menu").css("display", "block");
+  const menuList = document.querySelector(".menu_list");
+  const openBtn = document.querySelector(".open_menu");
+  const closeBtn = document.querySelector(".close_menu");
+
+  const speed = 300;
+
+  closeBtn.addEventListener("click", function () {
+    menuList.style.transition = `opacity ${speed}ms`;
+    menuList.style.opacity = "0";
+
+    setTimeout(() => {
+      menuList.style.display = "none";
+      closeBtn.style.display = "none";
+      openBtn.style.display = "block";
+    }, speed);
   });
-  // open menu
-  $(".open_menu").click(function () {
-    $(".menu_list").css("display", "flex");
-    $(".open_menu").css("display", "none");
-    $(".close_menu").css("display", "block");
+
+  openBtn.addEventListener("click", function () {
+    menuList.style.display = "flex";
+    menuList.style.opacity = "0";
+    menuList.style.transition = `opacity ${speed}ms`;
+
+    setTimeout(() => {
+      menuList.style.opacity = "1";
+    }, 10);
+
+    openBtn.style.display = "none";
+    closeBtn.style.display = "block";
   });
-  $('.brand-carousel').owlCarousel({
-    loop:true,
-    margin:10,
-    autoplay:true,
-    lazyLoad:true,
-    responsive:{
-      0:{
-        items:1
-      },
-      688:{
-        items:2
+
+  const cards = document.querySelectorAll(".card, .exp-item, .cert-item, .card_container, .side_bar, .my_cv");
+
+  cards.forEach(card => {
+    card.style.opacity = "0";
+    card.style.transform = "translateY(50px)";
+    card.style.transition = "all 0.6s ease";
+  });
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = "1";
+        entry.target.style.transform = "translateY(0)";
+        observer.unobserve(entry.target); 
       }
-    }
-  })
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  cards.forEach(card => observer.observe(card));
 });
