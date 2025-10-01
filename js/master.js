@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
     closeBtn.style.display = "block";
   });
 
-  const cards = document.querySelectorAll(".card, .exp-item, .cert-item, .card_container, .side_bar, .my_cv");
+  const cards = document.querySelectorAll(".card, .exp-item, .cert-item, .card_container, .side_bar, .my_cv, .ft_p");
 
   cards.forEach(card => {
     card.style.opacity = "0";
